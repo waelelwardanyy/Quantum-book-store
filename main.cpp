@@ -6,9 +6,6 @@
 
 using namespace std;
 
-// ========================
-// Service Stubs
-// ========================
 class ShippingService {
 public:
     static void ship(const string& address, const string& bookTitle) {
@@ -23,9 +20,7 @@ public:
     }
 };
 
-// ========================
-// Base Book Class
-// ========================
+
 class Book {
 protected:
     string ISBN;
@@ -57,9 +52,7 @@ public:
     virtual void reduceStock(int quantity) {}
 };
 
-// ========================
-// PaperBook Class
-// ========================
+
 class PaperBook : public Book {
 private:
     int stock;
@@ -82,9 +75,6 @@ public:
     }
 };
 
-// ========================
-// EBook Class
-// ========================
 class EBook : public Book {
 private:
     string fileType;
@@ -99,9 +89,6 @@ public:
     }
 };
 
-// ========================
-// ShowcaseBook Class
-// ========================
 class ShowcaseBook : public Book {
 public:
     ShowcaseBook(string ISBN, string title, int year, double price, string author)
@@ -117,9 +104,6 @@ public:
     }
 };
 
-// ========================
-// BookStore Class
-// ========================
 class BookStore {
 private:
     vector<Book*> inventory;
@@ -183,9 +167,6 @@ public:
     }
 };
 
-// ========================
-// Helper Function
-// ========================
 int getValidIntInput() {
     int value;
     while (true) {
@@ -260,9 +241,7 @@ private:
     }
 };
 
-// ========================
-// Main Function
-// ========================
+
 int main() {
     int choice;
     do {
